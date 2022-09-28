@@ -12,3 +12,7 @@
 7 add codes for bcryptjs in userController.js
 8 create JWt on .env file secret
 9 add this line in token: generateToken(user._id), userController
+**** for token **
+1. create authMiddleware.js
+2. add protect in userRoutes.js
+3. for testing in postman add authirization add token to get loged in user data

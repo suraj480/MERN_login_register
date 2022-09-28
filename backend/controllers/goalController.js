@@ -5,7 +5,9 @@ const Goal = require("../models/goalModel");
 // @route GET /api/goals
 // @access Private
 const getGoals = asyncHandler(async (req, res) => {
+  //commented to get specific user goal by entering his logedin  token number
   const goals = await Goal.find();
+  //const goals = await Goal.find({user:req.user.id});
   res.status(200).json(goals);
 });
 //@desc Set goal
