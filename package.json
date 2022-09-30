@@ -1,11 +1,14 @@
 {
   "name": "mern_login_register",
   "version": "1.0.0",
+  "proxy":"http://localhost:8000/",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node backend/server.js",
-    "server": "nodemon backend/server.js"
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +22,7 @@
     "mongoose": "^6.6.1"
   },
   "devDependencies": {
+    "concurrently": "^7.4.0",
     "nodemon": "^2.0.20"
   }
 }
